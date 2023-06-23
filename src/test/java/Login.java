@@ -37,5 +37,15 @@ public class Login extends TestBase {
 //        {            app.init();
 //    }
     }
-
+@Test
+    public void negatineLoginwithoitpasswTest(){
+        app.getSh().ifloged();
+        app.getSh().pause(4000);
+        app.getSh().openLoginForm();
+        app.getSh().fillLoginForm(new user().withEmail("maxmayzel@gmail.com") );
+        app.getSh().submitLogin();
+        Assert.assertTrue(app.getSh().isElement(By.id("password-error")));
+    }
+@Test
+    public void logOutTest(){}
 }
