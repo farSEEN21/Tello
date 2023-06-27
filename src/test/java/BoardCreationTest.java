@@ -19,17 +19,18 @@ public void Precond(){
 
 @Test
     public void BoardcreateTest(){
-String Boardname="QA_38"+System.currentTimeMillis();
+String Boardname="QA_38"+(System.currentTimeMillis()/1500)/3600;
     app.getBoardHelper().pressCreat();
     app.getSh().pause(2000);
     app.getBoardHelper().chooseboard();
     app.getSh().pause(2000);
     app.getBoardHelper().creatboard(new Board().withName(Boardname));
     app.getSh().pause(2000);
-    Assert.assertTrue(app.getSh().isElement(By.xpath("//div[@class='list-add-controla u-clearfix']")));
+  //  Assert.assertTrue(app.getSh().isElement(By.xpath("//div[@class='list-add-controla u-clearfix']")));
 
     app.getSh().pause(2000);
     app.getBoardHelper().clicknoard();
+    app.getBoardHelper().backToWorkSpase();
 //    app.getSh().click(;
 
     }

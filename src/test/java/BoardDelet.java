@@ -14,7 +14,20 @@ public class BoardDelet extends TestBase{
         }
     }
 
-
     @Test
-    public void
+    public void deletboard() {
+        app.getBoardHelper().pause(5000);
+        app.getBoardHelper().selectFirstboard();
+        app.getBoardHelper().pause(5000);
+        app.getBoardHelper().openMenu();
+        app.getBoardHelper().pause(5000);
+        app.getBoardHelper().openMenuMore();
+        app.getBoardHelper().pause(5000);
+        app.getBoardHelper().Closeboard();
+        app.getBoardHelper().pause(5000);
+
+    }
 }
+
+
+
